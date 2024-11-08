@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url(../Images/coconut-5.jpg);
+    color: #333;
+    padding-top: 80px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Or any background color you prefer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it’s above all other content */
+}
+
+#loading-screen img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar a.selected::before {
+    width: 100%;
+}
+
+
+/* Policy Section */
+.policies {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.policies h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #204b14;
+}
+
+.policy {
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.policy h2 {
+    font-size: 2.2rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.policy p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.policy h3 {
+    font-size: 1.6rem;
+    color: #2C3E50;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.policy ul {
+    list-style-type: none;
+    font-size: 1.1rem;
+}
+
+.policy ul li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.policy ul li::before {
+    content: "•";
+    color: #56B43A;
+    margin-right: 10px;
+}
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 70px 0;
+    color: #fff;
+}
+
+/* Footer specific styles */
+.footer .container2 {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #2abb0d;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style-type: none;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #bbbbbb;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover {
+    background-color: #2abb0d;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .policies {
+        padding: 30px;
+    }
+}

@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("../Images/spices-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+    height: 100%;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Or any background color you prefer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it’s above all other content */
+}
+
+#loading-screen img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar a.selected::before {
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 75px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    overflow: hidden;
+    position: relative;
+    color: #333;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0e4406;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-text img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%; /* Rounds the image */
+    box-shadow: 0 5px 15px black; /* Adds shadow to the image itself */
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.info-text img:hover {
+    transform: scale(1.05); /* Adds a hover effect for emphasis */
+}
+
+
+
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    column-count: 2; /* Creates two columns */
+    column-gap: 20px; /* Adds spacing between columns */
+}
+
+.items-list li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+    break-inside: avoid; /* Prevents items from breaking between columns */
+}
+
+.items-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.content ul {
+    color: #333;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 70px 0;
+    color: #fff;
+}
+
+/* Footer specific styles */
+.footer .container2 {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #2abb0d;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style-type: none;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #bbbbbb;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #2abb0d;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #fff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

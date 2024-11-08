@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contacts.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen">
+        <img src="../Images/logo-transparent.png" alt="Merchant Lanka Logo">
+    </div>
+    
+    <header class="header">
+        <a href="#" class="logo"><img src="../Images/logo.jpg" alt="Merchant Lanka"></a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../Gallery/gallery.html">Gallery</a>
+            <a href="../Products/products.html">Products</a>
+            <a href="../About Us/about.html">About</a>
+            <a href="../Contact Us/contacts.html" class="selected">Contact</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <div class="section-title">Company Information</div>
+                <div class="info-text">
+                    <strong>Company Name:</strong> MERCHANT LANKA PVT LTD<br>
+                    <strong>Products / Services Range:</strong> Coconut and Coconut Products, Spices, Coconut Ekels, Cinnamon<br>
+                    <strong>Address:</strong> Industrial Estate - Dankotuwa Lihiniyagama Road, Dankotuwa<br>
+                    <strong>Telephone:</strong> (94) 31-4936123
+                </div>
+            </div>
+
+            <!-- Form Submission Section -->
+            <div class="submit-form">
+                <div class="section-title">Contact Information</div>
+                <div class="info-text">
+                    <strong>Contact Person:</strong> Mr. Rohitha Thilakaratna (Managing Director)<br>
+                    <strong>Telephone:</strong>
+                    <ul class="contact-list">
+                        <li>(94) 11-4833972</li>
+                        <li>(94) 71-67233580</li>
+                        <li>(94) 72-2233480</li>
+                    </ul>
+                    <strong>Email:</strong> rohithat@sltnet.lk
+                </div>
+            </div>
+
+            <!-- Contact Us Button -->
+            <div class="contact-btn-container">
+                <button class="contact-btn" onclick="openContactForm()">Contact Us</button>
+            </div>
+        </div>
+        <!-- Modal Form -->
+    <div id="contactModal" class="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeContactForm()">&times;</span>
+            <h2>Contact Us</h2><br>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="3579f998-e857-4da0-842a-82dd400c3fcd">
+                <input type="text" id="name" placeholder="Full Name" name="name" autocomplete="off" required>
+                <div class="error-txt">Full Name can't be blank</div><br>
+                <input type="email" id="email" placeholder="Email Address" name="email" autocomplete="off" required>
+                <div class="error-txt">Email Address can't be blank</div><br>
+                <input type="text" id="phone" placeholder="Phone Number" name="phone" autocomplete="off" required>
+                <div class="error-txt">Phone Number can't be blank</div><br>
+                <input type="text" id="subject" placeholder="Subject" name="subject" autocomplete="off" required>
+                <div class="error-txt">Subject can't be blank</div><br>
+                <textarea id="message" rows="4" placeholder="Message" name="message" autocomplete="off" required></textarea>
+                <div class="error-txt">Message can't be blank</div><br>
+                <button type="submit" class="submit-btn">Send Email</button>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="../About Us/about.html">About Us</a></li>
+                        <li><a href="../Gallery/gallery.html">Gallery</a></li>
+                        <li><a href="../Policy/policies.html">Policies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="../Contact Us/contacts.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="../Products/products.html#spices">Spices & Condiment</a></li>
+                        <li><a href="../Products/products.html#coconut-kernal">Coconut Kernal Products</a></li>
+                        <li><a href="../Products/products.html#coconut-fibre">Coconut Fibre Products</a></li>
+                        <li><a href="../Products/products.html#other-products">Other Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Merchant Lanka PVT LTD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contacts.js"></script>
+</body>
+</html>

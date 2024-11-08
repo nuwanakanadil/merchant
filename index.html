@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Lanka - Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="loading-screen">
+        <img src="images/logo-transparent.png" alt="Merchant Lanka Logo">
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo"><img src="images/logo.jpg" alt="Merchant Lanka Logo"></a>
+        <nav class="navbar">
+            <a href="index.html" class="selected">Home</a>
+            <a href="Gallery/gallery.html">Gallery</a>
+            <a href="Products/products.html">Products</a>
+            <a href="About Us/about.html">About</a>
+            <a href="Contact Us/contacts.html">Contact</a>
+        </nav>
+    </header>
+    <br><br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Merchant Lanka</h1>
+            <p>Your trusted source for quality products from around the world.</p>
+            <a href="Products/products.html" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="Images/cinnamon-1.jpg" alt="Product 1">
+                <div class="caption">Cinnamon H2</div>
+            </div>
+            <div class="product-card">
+                <img src="Images/black pepper-1.jpg" alt="Product 2">
+                <div class="caption">Black Pepper</div>
+            </div>
+            <div class="product-card">
+                <img src="Images/cloves-1.jpg" alt="Product 3">
+                <div class="caption">Cloves HP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please feel free to reach out.</p><br>
+        <a href="Contact Us/contacts.html" class="contact-btn">Contact Us</a>
+    </section>
+
+    <script>
+        window.addEventListener("load", function () {
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.display = "none";
+});
+
+    </script>
+</body>
+</html>
